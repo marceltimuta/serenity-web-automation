@@ -1,0 +1,32 @@
+-U 
+clean
+test 
+-Prun-tests
+-Dtest=TestDemo
+-Dwebdriver.base.url=https://google.ro/
+-Dwebdriver.driver=firefox
+-Dwebdriver.remote.url=http://localhost:5555/wd/hub
+-Dsurefire.rerunFailingTestsCount=1
+-Dmax.retries=1
+-DJUNIT_RETRY_TESTS=true
+-Dwebdriver.timeouts.implicitlywait=31000
+-Dserenity.timeout=60
+-Dmaven.test.failure.ignore=true
+serenity:aggregate
+
+
+Run tests and generate report:
+mvn -U clean test -Dtest=TestDemo -Dwebdriver.driver=chrome -Dwebdriver.timeouts.implicitlywait=15000 -Dserenity.timeout=60 -Dmaven.test.failure.ignore=true serenity:aggregate
+
+
+Run from IDE and only generate report:
+mvn serenity:aggregate
+
+Report available at:
+/path/to/your/project/target/site/serenity/index.html
+
+
+
+Notes:
+can be run from Jenkins (parallel)
+results can be automatically published to Test Rail - Test Run
