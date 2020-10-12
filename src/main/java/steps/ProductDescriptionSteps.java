@@ -22,4 +22,14 @@ public class ProductDescriptionSteps extends ScenarioSteps {
     public void verifyPlpandPdpDescription(String plpDesc) {
         productDescriptionPage.verifyPlpandPdpDescription(plpDesc);
     }
+
+    @Step("Click on Add to cart button")
+    public void clickOnAddToCart() {
+        productDescriptionPage.clickOnAddToCart();
+    }
+
+    @Step
+    public void verifyAlertMessage(String expectedMessage) {
+        productDescriptionPage.verifyAlertMessage(expectedMessage);
+    }
 }

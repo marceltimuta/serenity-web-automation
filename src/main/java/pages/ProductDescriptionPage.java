@@ -20,6 +20,17 @@ public class ProductDescriptionPage extends PageObject {
     @FindBy(css = "#more-information > p")
     private WebElement pdpDescription;
 
+    @FindBy(css = "#tbodyid div.row a")
+    private WebElement addToCartButton;
+
+    public void clickOnAddToCart() {
+        addToCartButton.click();
+    }
+
+    public void verifyAlertMessage(String expectedMessage) {
+        String actualMessage = getDriver().switchTo().alert().getText();
+        assertEquals("Message is wrong",actualMessage,expectedMessage);
+    }
 
     public void checkProductName(String name) {
         assertEquals("PDP name is not correct", name, pdpName.getText());

@@ -1,15 +1,12 @@
 package tests;
 
-import net.serenitybdd.junit.runners.SerenityRunner;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.annotations.Title;
 import steps.HomepageSteps;
 import steps.ProductDescriptionSteps;
 
-@RunWith(SerenityRunner.class)
 public class ProductDescriptionTests extends BaseTest {
 
     @Steps
@@ -42,5 +39,14 @@ public class ProductDescriptionTests extends BaseTest {
         String description = homepageSteps.getDescription();
         homepageSteps.clickOnGalaxyS6Phone();
         productDescriptionSteps.verifyPlpandPdpDescription(description);
+    }
+
+    @Test
+    @Title("Test the add to cart button on the product page.")
+    public void test4() {
+        homepageSteps.open();
+        homepageSteps.clickOnGalaxyS6Phone();
+        productDescriptionSteps.clickOnAddToCart();
+        productDescriptionSteps.verifyAlertMessage("Product added");
     }
 }
