@@ -28,4 +28,8 @@ public class HomepageSteps extends ScenarioSteps {
 		return homePage.getProductDescription();
 	}
 
+	@Step("Verify that only laptops are displayed on the page")
+    public void verifyThatOnlyLaptopsAreShown() {
+		homePage.verifyThatOnlyLaptopsAreShown();
+    }
 }
