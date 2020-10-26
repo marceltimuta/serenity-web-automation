@@ -1,4 +1,4 @@
-package pages;
+package pageObjects;
 
 import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.support.ui.ExpectedConditions;

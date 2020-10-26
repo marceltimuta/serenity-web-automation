@@ -2,25 +2,25 @@ package steps;
 
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
-import pages.LoginPage;
+import pageObjects.LoginModal;
 
 public class LoginSteps extends ScenarioSteps {
 
-    private LoginPage loginPage;
+    private LoginModal loginModal;
 
     @Step("Fill username field")
     public void fillUsernameField(String username) {
-        loginPage.fillUsernameField(username);
+        loginModal.fillUsernameField(username);
     }
 
     @Step("Fill password field")
     public void fillPasswordField(String password) {
-        loginPage.fillPasswordField(password);
+        loginModal.fillPasswordField(password);
     }
 
     @Step("Click on sign up button")
     public void clickOnLoginButton() {
-        loginPage.clickOnLoginButton();
+        loginModal.clickOnLoginButton();
     }
 
 }

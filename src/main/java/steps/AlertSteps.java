@@ -2,7 +2,7 @@ package steps;
 
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
-import pages.Alert;
+import pageObjects.Alert;
 
 public class AlertSteps extends ScenarioSteps {
 

@@ -21,4 +21,12 @@ public class HomePageTests extends BaseTest{
         navigationSteps.clickOnLaptopsCategory();
         homepageSteps.verifyThatOnlyLaptopsAreShown();
     }
+
+    @Test
+    @Title("Verify that clicking on “monitors” on the homepage will display monitors")
+    public void verifyMonitorsPage() {
+        homepageSteps.open();
+        navigationSteps.clickOnMonitorsCategory();
+        homepageSteps.verifyThatOnlyMonitorsAreShown();
+    }
 }

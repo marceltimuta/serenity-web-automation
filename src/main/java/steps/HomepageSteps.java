@@ -2,7 +2,7 @@ package steps;
 
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
-import pages.HomePage;
+import pageObjects.HomePage;
 
 public class HomepageSteps extends ScenarioSteps {
 
@@ -32,4 +32,8 @@ public class HomepageSteps extends ScenarioSteps {
     public void verifyThatOnlyLaptopsAreShown() {
 		homePage.verifyThatOnlyLaptopsAreShown();
     }
+
+    @Step("Verify that only monitors are displayed on the page")
+	public void verifyThatOnlyMonitorsAreShown() { homePage.verifyThatOnlyMonitorsAreShown();
+	}
 }

@@ -1,4 +1,4 @@
-package pages;
+package pageObjects;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
@@ -14,11 +14,17 @@ public class Navigation extends PageObject {
     @FindBy(css = "#login2")
     private WebElement login;
 
+    @FindBy(css = "#cartur")
+    private WebElement cartLink;
+
     @FindBy(css = "#nameofuser")
     private WebElement nameOfUser;
 
     @FindBy(css = ".list-group #itemc:nth-child(3)")
     private WebElement laptopsCategory;
+
+    @FindBy(css = "#itemc:nth-child(4)")
+    private WebElement monitorsCategory;
 
     public void clickOnSignUpLink() {
         signUp.click();
@@ -26,8 +32,14 @@ public class Navigation extends PageObject {
 
     public void clickOnLoginLink() { login.click(); }
 
+    public void clickOnCartLink() { cartLink.click();}
+
     public void clickOnLaptopsCategory() {
         laptopsCategory.click();
+    }
+
+    public void clickOnMonitorsCategory() {
+        monitorsCategory.click();
     }
 
     public void verifyThatUserIsLoggedSuccessfully() {

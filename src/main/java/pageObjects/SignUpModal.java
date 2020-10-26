@@ -1,12 +1,10 @@
-package pages;
+package pageObjects;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class SignUpPage extends PageObject {
+public class SignUpModal extends PageObject {
 
     @FindBy(css = "#sign-username")
     private WebElement usernameField;
