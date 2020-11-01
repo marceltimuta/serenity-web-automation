@@ -25,6 +25,10 @@ public class HomePage extends PageObject {
     @FindBy(css = "h4.card-title")
     private List<WebElement> productNames;
 
+    private String productPriceValue;
+
+    private String productDescriptionValue;
+
     private boolean stringContainsItemsFromList(String inputStr, List<String> items) {
             return items.stream().anyMatch(inputStr::contains);
     }
@@ -38,12 +42,20 @@ public class HomePage extends PageObject {
         galaxyS6Phone.click();
     }
 
+    public void saveProductPrice() {
+      productPriceValue = productPrice.getText();
+    }
+
     public String getProductPrice() {
-        return productPrice.getText();
+        return productPriceValue;
+    }
+
+    public void saveProductDescription() {
+        productDescriptionValue = productDescription.getText();
     }
 
     public String getProductDescription() {
-        return productDescription.getText();
+        return productDescriptionValue;
     }
 
     public void verifyThatOnlyLaptopsAreShown() {

@@ -27,11 +27,6 @@ public class ProductDescriptionPage extends PageObject {
         addToCartButton.click();
     }
 
-    public void verifyAlertMessage(String expectedMessage) {
-        String actualMessage = getDriver().switchTo().alert().getText();
-        assertEquals("Message is wrong",actualMessage,expectedMessage);
-    }
-
     public void checkProductName(String name) {
         assertEquals("PDP name is not correct", name, pdpName.getText());
     }

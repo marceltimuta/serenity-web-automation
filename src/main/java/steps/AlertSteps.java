@@ -8,7 +8,7 @@ public class AlertSteps extends ScenarioSteps {
 
     private Alert alert;
 
-    @Step("Verify alert message")
+    @Step("Verify alert message to be: {0}")
     public void verifyAlertMessage(String expected) {
          alert.verifyAlertMessage(expected);
     }

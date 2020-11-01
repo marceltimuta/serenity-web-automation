@@ -8,8 +8,11 @@ public class CartSteps extends ScenarioSteps {
 
     private CartPage cartPage;
 
-    @Step("Open cart page")
+    @Step("Set user cookie")
     public void setCookie() { cartPage.setCookie(); }
+
+    @Step("Remove cookies")
+    public void removeCookie() { cartPage.removeCookie(); }
 
     @Step("Verify that total price is correct")
     public void checkThatTotalPriceIsCorrect() {

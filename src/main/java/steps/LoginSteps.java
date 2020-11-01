@@ -8,12 +8,12 @@ public class LoginSteps extends ScenarioSteps {
 
     private LoginModal loginModal;
 
-    @Step("Fill username field")
+    @Step("Fill username field with value: {0}")
     public void fillUsernameField(String username) {
         loginModal.fillUsernameField(username);
     }
 
-    @Step("Fill password field")
+    @Step("Fill password field with value: {0}")
     public void fillPasswordField(String password) {
         loginModal.fillPasswordField(password);
     }

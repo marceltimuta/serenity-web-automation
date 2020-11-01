@@ -18,9 +18,19 @@ public class HomepageSteps extends ScenarioSteps {
 		homePage.clickOnGalaxyS6Phone();
 	}
 
+	@Step("Save PLP product price")
+	public void savePrice() {
+		homePage.saveProductPrice();
+	}
+
 	@Step("Get PLP product price")
 	public String getPrice() {
 		return homePage.getProductPrice();
+	}
+
+	@Step("Save PLP product description")
+	public void saveDescription() {
+		homePage.saveProductDescription();
 	}
 
 	@Step("Get PLP product description")

@@ -38,6 +38,10 @@ public class CartPage extends PageObject {
         getDriver().manage().addCookie(new Cookie("user", "b5d47874-5b15-c7d8-11af-a021c8b3328c"));
     }
 
+    public void removeCookie() {
+        getDriver().manage().deleteAllCookies();
+    }
+
     public void checkThatTotalPriceIsCorrect() {
         assertEquals("Product total price is not the same as cart price",calculateTotalProductPrice(), totalPrice.getText());
     }

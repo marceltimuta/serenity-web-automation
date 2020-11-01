@@ -16,6 +16,6 @@ public class Alert extends PageObject {
     }
 
     public void verifyAlertMessage(String expected) {
-        assertEquals("Wrong message",expected, getAlertMessage());
+        assertEquals("Wrong alert message",expected, getAlertMessage());
     }
 }

@@ -8,6 +8,6 @@ public class OrderConfirmationSteps extends ScenarioSteps {
 
     private OrderConfirmationModal orderConfirmationModal;
 
-    @Step("Verify that order was successfullt placed message")
+    @Step("Verify that order was successfully placed message")
     public void verifySuccessMessageText() {orderConfirmationModal.verifySuccessMessageText();}
 }
