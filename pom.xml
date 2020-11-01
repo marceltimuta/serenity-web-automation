@@ -9,7 +9,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<serenity.version>2.0.50</serenity.version>
+		<serenity.version>2.3.6</serenity.version>
 	</properties>
 
 	<dependencies>
@@ -27,7 +27,6 @@
 			<groupId>net.serenity-bdd</groupId>
 			<artifactId>serenity-junit</artifactId>
 			<version>${serenity.version}</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -50,6 +49,7 @@
             <version>2.1.13</version>
             <scope>test</scope>
         </dependency>
+
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
@@ -72,10 +72,7 @@
 					<testFailureIgnore>true</testFailureIgnore>
 					<argLine>-Dfile.encoding=UTF-8</argLine>
 					<includes>
-						<include>**/*Test.java</include>
-						<include>**/Test*.java</include>
-						<include>**/When*.java</include>
-						<include>**/*Story.java</include>
+						<include>**/*Tests.java</include>
 					</includes>
 					<argLine>-Xmx2048m</argLine>
 				</configuration>
@@ -93,6 +90,20 @@
 				<groupId>net.serenity-bdd.maven.plugins</groupId>
 				<artifactId>serenity-maven-plugin</artifactId>
 				<version>${serenity.version}</version>
+
+				<dependencies>
+					<!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-single-page-report -->
+					<dependency>
+						<groupId>net.serenity-bdd</groupId>
+						<artifactId>serenity-single-page-report</artifactId>
+						<version>2.3.6</version>
+					</dependency>
+				</dependencies>
+
+				<configuration>
+					<reports>single-page-html</reports>
+				</configuration>
+
 				<executions>
 					<execution>
 						<id>serenity-reports</id>
